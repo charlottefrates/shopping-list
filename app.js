@@ -48,7 +48,8 @@ $('#js-shopping-list-form').submit(function(event) {
 state.deleteButton();
 state.purchased();
 
-//.toggleClass doesnt stay into effect when more items are added 
+//.toggleClass doesnt stay into effect when more items are added
+
 /*
 Add alert to make sure form field is populated
 if(state.items.trim().length === 0) {

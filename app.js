@@ -10,7 +10,7 @@ function addToShoppingList (state, item){
      });
 }
 
-//state.items[].Name
+//state.items[].name
 function findItemIndex(state, item) {
      // Access the object state
      var objArr = state.items
@@ -21,8 +21,10 @@ function findItemIndex(state, item) {
 	}
 }
 
+
 function updateStatus(state, element) {
 	// fint the item name from selected element $('.shopping-list')
+     // var index = element.closest('li').attr('index')
 	var itemName = element.closest('li').children('.shopping-item').text();
 	//find item in state.items
 	var itemIndex = findItemIndex(state, itemName);
@@ -82,7 +84,7 @@ $('document').ready(function () {
 
      //delete items
 	$('.shopping-list').on('click', '.shopping-item-delete', function() {
-		crossOutItem(state, $(this));
+		deleteItem(state, $(this));
 		renderList(state, $(this), null, 'remove');
 	});
 });

@@ -10,7 +10,7 @@ function addToShoppingList (state, item){
      });
 }
 
-//state.items[].name
+//state.items[].name WRONG
 function findItemIndex(state, item) {
      // Access the object state
      var objArr = state.items
